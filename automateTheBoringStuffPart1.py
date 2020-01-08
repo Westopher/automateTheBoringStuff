@@ -34,7 +34,13 @@ while spam < 5:
         break
 print("access granted") """
 
-print("my name is")
+""" print("my name is")
 
 for i in range(5):
-    print('West '+str(i)+' is the number')
+    print('West '+str(i)+' is the number') """
+
+total = 0
+for num in range(101):
+    total = total + num
+    print(''+str(num)+' is the number. '+str(int(total))+' is the current total')
+print(total)
