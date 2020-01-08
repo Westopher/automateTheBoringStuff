@@ -9,9 +9,27 @@ myAge = input()
 print("You will be " + str(int(myAge) + 1) + ' in a year.')
  """
 
-bacon = 20
+""" bacon = 20
 
 print(bacon + 1)
 
 rounded = round(6.2094532708376, 2)
 print(rounded)
+
+print("I have eaten " + str(99) + " burritos")
+
+spam = 0
+while spam < 5:
+    print("hey,hey,hey")
+    spam = spam + 1 """
+
+while True:
+    print("Who dat boy? Who him is?")
+    name = input()
+    if name != 'West':
+        continue
+    print("Hello West, What's the password?")
+    password = input()
+    if password == 'password':
+        break
+print("access granted")
