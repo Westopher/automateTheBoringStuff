@@ -39,8 +39,13 @@ print("access granted") """
 for i in range(5):
     print('West '+str(i)+' is the number') """
 
-total = 0
+""" total = 0
 for num in range(101):
     total = total + num
     print(''+str(num)+' is the number. '+str(int(total))+' is the current total')
-print(total)
+print(total) """
+
+import random
+
+for i in range(5):
+    print(random.randint(1, 10))
