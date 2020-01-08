@@ -23,7 +23,7 @@ while spam < 5:
     print("hey,hey,hey")
     spam = spam + 1 """
 
-while True:
+""" while True:
     print("Who dat boy? Who him is?")
     name = input()
     if name != 'West':
@@ -32,4 +32,9 @@ while True:
     password = input()
     if password == 'password':
         break
-print("access granted")
+print("access granted") """
+
+print("my name is")
+
+for i in range(5):
+    print('West '+str(i)+' is the number')
