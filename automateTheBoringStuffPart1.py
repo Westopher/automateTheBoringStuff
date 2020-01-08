@@ -45,14 +45,45 @@ for num in range(101):
     print(''+str(num)+' is the number. '+str(int(total))+' is the current total')
 print(total) """
 
-import random, sys
+
 """ 
 for i in range(5):
     print(random.randint(1, 10)) """
 
-while True:
+""" while True:
     print("Type exit to exit")
     response = input()
     if response == 'exit':
         sys.exit()
-    print('You typed '+ response +'.')
+    print('You typed '+ response +'.') """
+
+import random
+secretNumber = random.randint(1,20)
+print("Choose a number between 1 and 20.")
+
+for guessesTaken in range(1,7):
+    print('Take a guess.')
+    guess = int(input())
+
+    if guess < secretNumber:
+        print("Too low")
+    elif guess > secretNumber:
+        print("Too high")
+    else:
+        break
+
+if guess == secretNumber:
+    print('You got it. The number was '+str(secretNumber)+'. It took you '+str(guessesTaken)+' guesses')
+else:
+    print('No, the number I was thinking of was '+str(secretNumber)+'')
+
+
+
+
+
+
+
+
+
+
+
