@@ -45,7 +45,14 @@ for num in range(101):
     print(''+str(num)+' is the number. '+str(int(total))+' is the current total')
 print(total) """
 
-import random
-
+import random, sys
+""" 
 for i in range(5):
-    print(random.randint(1, 10))
+    print(random.randint(1, 10)) """
+
+while True:
+    print("Type exit to exit")
+    response = input()
+    if response == 'exit':
+        sys.exit()
+    print('You typed '+ response +'.')
