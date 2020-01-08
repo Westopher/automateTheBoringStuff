@@ -57,7 +57,7 @@ for i in range(5):
         sys.exit()
     print('You typed '+ response +'.') """
 
-import random
+""" import random
 secretNumber = random.randint(1,20)
 print("Choose a number between 1 and 20.")
 
@@ -75,11 +75,65 @@ for guessesTaken in range(1,7):
 if guess == secretNumber:
     print('You got it. The number was '+str(secretNumber)+'. It took you '+str(guessesTaken)+' guesses')
 else:
-    print('No, the number I was thinking of was '+str(secretNumber)+'')
+    print('No, the number I was thinking of was '+str(secretNumber)+'') """
 
+import random, sys
 
+print('Rock, Paper, Scissors')
 
+wins = 0
+losses = 0
+ties = 0
 
+while True: #main game loop
+    print('%s Wins, %s Losses, %s Ties' %(wins, losses, ties))
+    while True: #player input loop
+        print('Shoot your shot: (r)ock, (p)aper, (s)cissors, or (q)uit')
+        playerMove = input()
+        if playerMove == 'q':
+            sys.exit() #leave the game / end the program
+        if playerMove == 'r' or playerMove == 'p' or playerMove == 's':
+            break #leave the input loop
+
+    if playerMove == 'r':
+        print('Rock vs...')
+    if playerMove == 'p':
+        print('Paper vs...')
+    if playerMove == 's':
+        print('Scissors vs...')
+
+    randomNumber = random.randint(1,3)
+    if randomNumber == 1:
+        computerMove = 'r'
+        print('Rock')
+    elif randomNumber == 2:
+        computerMove = 'p'
+        print('Paper')
+    elif randomNumber == 3:
+        computerMove = 's'
+        print('Scissors')
+    
+    if playerMove == computerMove:
+        print('It is a tie, shoot again.')
+        ties = ties + 1
+    elif playerMove == 'r' and computerMove == 's':
+        print('You win.')
+        wins = wins + 1
+    elif playerMove == 'p' and computerMove == 'r':
+        print('You win!')
+        wins = wins + 1
+    elif playerMove == 's' and computerMove == 'p':
+        print('You win!')
+        wins = wins + 1
+    elif playerMove == 'r' and computerMove == 'p':
+        print('You lose!')
+        losses = losses + 1
+    elif playerMove == 'p' and computerMove == 's':
+        print('You lose!')
+        losses = losses + 1
+    elif playerMove == 's' and computerMove == 'r':
+        print('You lose!')
+        losses = losses + 1
 
 
 
